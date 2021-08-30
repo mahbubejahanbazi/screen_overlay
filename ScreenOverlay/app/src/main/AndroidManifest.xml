@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.ScreenOverlay">
-        <activity android:name=".MainActivity"
+        <activity android:name="ir.mjahanbazi.screenoverlay.MainActivity"
             android:theme="@style/TransparentTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
