@@ -13,8 +13,6 @@ import androidx.annotation.Nullable;
 
 
 public class AppService extends Service {
-    private final int width = AppUtils.dpi2Pixel(200);
-    private final int height = AppUtils.dpi2Pixel(300);
     private WindowManager windowManager;
     private AppView appView;
     private WindowManager.LayoutParams param;
@@ -28,6 +26,8 @@ public class AppService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        final int width = AppUtils.dpi2Pixel(200, this);
+        final int height = AppUtils.dpi2Pixel(300, this);
         windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         AppUtils.windowManager = windowManager;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

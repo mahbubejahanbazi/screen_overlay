@@ -32,7 +32,7 @@ public class CloseButton extends AppCompatImageButton implements View.OnClickLis
     private void init(Context context) {
         this.context = context;
         setBackground(createSelector());
-        int widthHeight = AppUtils.dpi2Pixel(35);
+        int widthHeight = AppUtils.dpi2Pixel(35,getContext());
         setMaxWidth(widthHeight);
         setMinimumWidth(widthHeight);
         setMaxHeight(widthHeight);
